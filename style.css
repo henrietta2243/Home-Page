@@ -30,7 +30,7 @@ body {
     border-radius: 5px;
 }
 
-.carousel-inner > .carousel-item > img {
+.carousel-inner > .carousel-item > a img {
     margin-left: 15vw;
     width: 60%;
 
