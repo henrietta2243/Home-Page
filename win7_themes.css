@@ -1,0 +1,77 @@
+*body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+    margin-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 3rem;
+}
+.themes-container {
+    background-color: azure;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 30px;
+}
+
+@media (max-width: 986px) {
+    .themes-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+   
+}
+
+@media (max-width: 750px) {
+    .themes-container {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+}
+
+.win7 {
+    display: flex;
+    width: 373px;
+    height: 196px;
+}
+
+.win7 .image {
+    text-decoration: none;
+    width: 373px;
+}
+
+.win7 .image img {
+    width: 373px;
+    height: 196px;
+    border-radius: 16px;
+}
+
+.win7 .image .masked {
+    display: flex;
+    position: relative;
+    color: azure;
+    font-size: 30px;
+    align-items: center;
+    top: -60px;
+    background-image: linear-gradient(rgba(129, 126, 126, 0.44), rgba(0, 0, 0, 0.836));
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding: 20px;
+    width: 373px;
+    height: 60px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.win7 .image:hover .masked {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3, ease-in-out;
+}
+
+.container-footer {
+    background-color: azure;
+   padding: 1rem 2rem;
+ }
