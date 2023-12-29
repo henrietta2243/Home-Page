@@ -1,47 +1,40 @@
-// Get all elements with class "aimp-img"
 var aimpImages = document.querySelectorAll('.aimp-img');
 
-// Function to remove classes after image loaded
-  function removeClassesAfterLoad(imgElement) {
-// Remove "skeleton" class from parent div
-    imgElement.parentNode.classList.remove('skeleton');
+  function removeClassesAfterLoad(aimpImage) {
+    aimpImage.parentNode.classList.remove('skeleton');
 
-// Remove "hide" class from the image
-    imgElement.classList.remove('hide');
+    aimpImage.classList.remove('hide');
   }
 
-// Attach load event to each img element
   aimpImages.forEach(function(aimpImg) {
-    var imgElement = aimpImg.querySelector('.aimp-img');
+    var aimpImage = aimpImg.querySelector('.aimp-img');
     
-    if (imgElement) {
-      imgElement.addEventListener('load', function() {
-// Remove classes after image has loaded
-        removeClassesAfterLoad(imgElement);
+    if (aimpImage) {
+      aimpImage.addEventListener('load', function() {
+        removeClassesAfterLoad(aimpImage);
       });
     };
     aimpImg.addEventListener("error", function(replace) {
-    replace.target.src = '/img/404.svg';
+    replace.target.src = '/Home-page/img/404.svg';
     });
   });
 
-  // Get All elements with class "img-card"
+  
   var imgCards = document.querySelectorAll(".img-card");
 
   imgCards.forEach(function(imgCard) {
-    var imgElement = imgCard.querySelector(".img-card");
+    var card = imgCard.querySelector(".img-card");
 
-    if (imgElement) {
-      imgElement.addEventListener("load", function() {
-        removeClassesAfterLoad(imgElement);
+    if (card) {
+      card.addEventListener("load", function() {
+        removeClassesAfterLoad(card);
       });
     };
     imgCard.addEventListener("error", function(replace) {
-      replace.target.src = "/img/404.svg";
+      replace.target.src = "/Home-Page/img/404.svg";
     });
   });
 
-  // Get all elements with class "img-carousel"
   var imgCarousels = document.querySelectorAll(".img-carousel");
 
   imgCarousels.forEach(function(imgCarousel) {
@@ -53,6 +46,6 @@ var aimpImages = document.querySelectorAll('.aimp-img');
       });
     };
     imgCarousel.addEventListener("error", function(replace) {
-      replace.target.src = "/img/404.svg";
+      replace.target.src = "/Home-Page/img/404.svg";
     });
   });
