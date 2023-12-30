@@ -83,7 +83,7 @@ body {
     transition: 300ms ease-in;
 }
 
-/*.skeleton {
+.skeleton {
     background-image: linear-gradient(
       120deg,
       #ececec 50%,
@@ -101,12 +101,9 @@ body {
     100% {
       background-position: -100% 0;
     }
-  }*/
+  }
 
 .image {
-	background-image: url(https://henrietta2243.github.io/Home-Page/img/wait.svg);
-    background-size: cover;
-    background-position: center;	
     text-decoration: none;
     display: flex;
     line-height: normal;
