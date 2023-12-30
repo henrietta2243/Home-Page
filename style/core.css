@@ -104,7 +104,7 @@ body {
   }*/
 
 .image {
-	background-image: url(/Home-Page/img/wait.svg);
+	background-image: url(Home-Page/img/wait.svg);
     background-size: cover;
     background-position: center;	
     text-decoration: none;
