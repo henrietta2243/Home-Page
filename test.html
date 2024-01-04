@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Windows 10 Themes</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/core.css">
+        
+  </head>
+  <body>
+    <div class="themes">
+      <a class="image-container skeleton " href="https://japanimetheme.blogspot.com/2023/10/win10-suomi-gfl.html" title="Suomi GFL">
+        <img  src="https://vsthemes.org/uploads/nova/760430-1/01/3a30b1a7be63ab2661d6f5e557a5baf3.webp" class="hide" alt=" ">
+        <span class="masked">Suomi GFL</span>
+      </a>
+    </div>
+    
+    <div class="themes">
+      <a class="image-container skeleton" href="https://japanimetheme.blogspot.com/2023/10/win10-suomi-gfl.html" title="Suomi GFL">
+        <img  src="https://vsthemes.org/uploads/nova/760430-1/0b1/3a30b1a7be63ab2661d6f5e557a5baf3.webp" class="hide" alt=" ">
+        <span class="masked">Suomi GFL</span>
+      </a>
+    </div>
+
+    
+    
+  <script>
+    // Get all image elements with the class "hide" and "skeleton"
+    var images = document.querySelectorAll(' img.hide');
+    var replacementImage = document.getElementById('replacementImage');
+
+    // Function to remove classes after image is loaded
+    function removeClassesAfterLoad(image) {
+      // Remove the 'hide' class
+      image.classList.remove("hide");
+      // Remove the 'skeleton' class from the parent container
+      image.parentElement.classList.remove("skeleton");
+    };
+
+    // Add 'load' event listener for each image
+    images.forEach(function(image) {
+      image.addEventListener("load", function() {
+        // Call the function to remove classes after image is loaded
+        removeClassesAfterLoad(image);
+      });
+      image.addEventListener("error", function(replace) {
+        replace.target.src = '/img/placeholder.jpg';
+      });
+    });
+
+    
+  </script>
+
+  <script src="/js/image.js"></script>
+</body>
+</html>
