@@ -5,6 +5,7 @@ carouselDivs.forEach( div => {
 
   function loaded(){
     div.classList.add("loaded")
+    div.classList.remove("skeleton")
   }
 
   if (img.complete) {
@@ -21,6 +22,7 @@ imgCardDivs.forEach( div => {
 
   function loaded(){
     div.classList.add("loaded")
+    div.classList.remove("skeleton")
   }
 
   if (img.complete) {
@@ -37,6 +39,7 @@ aimpImgDivs.forEach( div => {
 
   function loaded(){
     div.classList.add("loaded")
+    div.classList.remove("skeleton")
   }
 
   if (img.complete) {
