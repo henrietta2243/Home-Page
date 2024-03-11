@@ -24,6 +24,12 @@ body {
 	.navbar .nav-item .dropdown-menu{ margin-top:0; }
 }
 
+.active {
+    background-color: var(--bg-col-sec);
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
 .main-container {
     background-color: aliceblue;
     height: 100%;
