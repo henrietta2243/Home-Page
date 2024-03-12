@@ -23,3 +23,10 @@ themesDivs.forEach(div => {
     img.addEventListener("error", notFound)
   }
 })
+
+const btn1s = document.getElementById("btn1")
+btn1s.addEventListener("click", function(){
+  const img1s = document.getElementById("img1")
+  img1s.classList.remove("nsfw")
+  btn1s.classList.remove("show")
+})
