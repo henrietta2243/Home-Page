@@ -30,3 +30,24 @@ btn1s.addEventListener("click", function(){
   img1s.classList.remove("nsfw")
   btn1s.classList.remove("show")
 })
+
+const btn2s = document.getElementById("btn2")
+btn2s.addEventListener("click", function(){
+  const img2s = document.getElementById("img2")
+  img2s.classList.remove("nsfw")
+  btn2s.classList.remove("show")
+})
+
+const btn3s = document.getElementById("btn3")
+btn3s.addEventListener("click", function(){
+  const img3s = document.getElementById("img3")
+  img3s.classList.remove("nsfw")
+  btn3s.classList.remove("show")
+})
+
+const btn4s = document.getElementById("btn4")
+btn4s.addEventListener("click", function(){
+  const img4s = document.getElementById("img4")
+  img4s.classList.remove("nsfw")
+  btn4s.classList.remove("show")
+})
