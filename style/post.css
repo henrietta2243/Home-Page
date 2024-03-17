@@ -69,6 +69,22 @@ body {
     margin-bottom: 4px;
 }
 
+.imgpreview {
+    display: flex;
+    margin-top: 1.3rem;
+}
+
+.prevImg {
+    max-width: 200px;
+    margin-right: 1rem;
+}
+
+.prevImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
 .nxt {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -83,8 +99,8 @@ body {
     border-radius: 16px;
     position: relative;
     margin-top: 1rem;
-    width: 618px;
-    height: 347px;
+    max-width: 618px;
+    max-height: 347px;
     transition: 500ms ease-in;
 }
 
@@ -169,8 +185,8 @@ body {
     color: var(--col-prim);
     border-radius: 1rem;
     margin-bottom: 0.8rem;
-    width: 300px;
-    height: 124px;
+    max-width: 300px;
+    max-height: 124px;
     padding-left: 4px;
 }
 
@@ -187,14 +203,16 @@ body {
     margin-left: 4px;
     border: 0.8px solid var(--bg-col-sec);
     border-radius: 1rem;
+    max-width: 220px;
+    max-height: 124px;
 }
 
 .rel-image img {
-    width: 220px;
-    height: 124px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 16px;
+    border-radius: 1rem;
     opacity: 0;
     transition: opacity 600ms ease-in-out;
 }

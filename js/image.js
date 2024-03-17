@@ -51,3 +51,10 @@ btn4s.addEventListener("click", function(){
   img4s.classList.remove("nsfw")
   btn4s.classList.remove("show")
 })
+
+const btn5 = document.getElementById('btn5')
+btn5.addEventListener('click', function(){
+  const img5 = document.getElementById('img5')
+  img5.classList.remove("nsfw")
+  btn5.classList.remove("show")
+})
