@@ -170,6 +170,9 @@ img {
     position: absolute;
     top: 45%;
     left: 35%;
+    background: none;
+    outline: none;
+    border: none;
     background-color: aqua;
     padding: 4px;
     border-radius: 4px;
