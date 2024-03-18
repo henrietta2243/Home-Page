@@ -40,7 +40,7 @@ body {
 
 .themes-container {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
     justify-content: center;
@@ -70,18 +70,19 @@ body {
 }
 
 .imgpreview {
-    display: grid;
-    grid-template-rows: repeat(200px, 113px);
+    display: flex;
     margin-top: 1.3rem;
+    align-content: start;
 }
 
 .show1 {
     position: relative;
     display: flex;
     z-index: 4;
-    top: 4.37rem;
+    top: 2.37rem;
     left: 12.5rem;
     width: 110px;
+    height: 32px;
     background: none;
     outline: none;
     border: none;
@@ -107,17 +108,24 @@ body {
 .nsfw1 {
     filter: blur(10px);
     pointer-events: none;
+    position: relative;
+    left: -6.562rem;
 }
 
 .prevImg {
     max-width: 200px;
     margin-right: 1rem;
+    cursor: pointer;
+}
+
+#prev1 {
+    display: flex;
 }
 
 .prevImg img {
     width: 100%;
     height: 100%;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
 }
 
 .nxt {
@@ -158,6 +166,7 @@ body {
 
 .nsfw {
     filter: blur(10px);
+    pointer-events: none;
 }
 
 .nuxt {
@@ -212,6 +221,7 @@ body {
 
 .side-wrapper {
     padding-top: 20px;
+    padding-left: 1.7rem;
 }
 
 .related {
@@ -264,54 +274,25 @@ body {
     padding: 1rem 2rem;
 }
 
-.nxt-open {
-    border: none;
-    background: none;
-    outline: none;
-}
-
-.mdls {
+#lightbox {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 300ms ease-in-out;
-    margin-top: 1rem;
-    z-index: 5;
-}
-
-.mdls.active {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.close-btn {
-    border: none;
-    background: none;
-    outline: none;
-    font-weight: bold;
-    font-size: 2rem;
-    color: #f0f8ff;
-    cursor: pointer;
-    position: absolute;
-}
-
-.modalImg img {
-    width: 900px;
-}
-
-#overlay {
-    position: fixed;
-    opacity: 0;
-    transition: 300ms ease-in-out;
+    z-index: 1000;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
 }
-
-#overlay.active {
-    pointer-events: all;
-    opacity: 1;
+  
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 1.3rem;
+    border-radius: 10px;
 }

@@ -79,39 +79,24 @@ function remNuxt(nuxt){
     nuxt.classList.add('nuxt1')
 }
 
-const openModalBtn = document.querySelectorAll('[data-modal-target]')
-const closeModalBtn = document.querySelectorAll('[data-close-btn]')
-const overlay = document.getElementById('overlay')
+const lightbox = document.createElement('div')
+lightbox.id = 'lightbox'
+document.body.appendChild(lightbox)
 
-openModalBtn.forEach(button => {
-    button.addEventListener('click', () =>{
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
-    })
+const images = document.querySelectorAll('.nzxt')
+images.forEach(image => {
+  image.addEventListener('click', e => {
+    lightbox.classList.add('active')
+    const img = document.createElement('img')
+    img.src = image.src
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild)
+    }
+    lightbox.appendChild(img)
+  })
 })
 
-closeModalBtn.forEach(button => {
-    button.addEventListener('click', () =>{
-        const modal = button.closest('.mdls')
-        closeModal(modal)
-    })
+lightbox.addEventListener('click', e => {
+  if (e.target !== e.currentTarget) return
+  lightbox.classList.remove('active')
 })
-
-overlay.addEventListener('click', () => {
-    const modal = document.querySelectorAll('.active')
-    modal.forEach( modal => {
-        closeModal(modal)
-    })
-})
-
-function openModal(modal){
-    if (modal == null) return
-    modal.classList.add('active')
-    overlay.classList.add('active')
-}
-
-function closeModal(modal){
-    if (modal == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
-}
