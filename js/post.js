@@ -35,8 +35,8 @@ themesDivs.forEach(div => {
 
 })
 
-const wait = document.querySelector(".imgDsp1")
-wait.addEventListener('load', function(){
+const imgDsp1 = document.querySelector(".imgDsp1")
+imgDsp1.addEventListener('load', function(){
     const show = document.getElementById("btn1")
     show.classList.add("loaded")
 })
