@@ -13,6 +13,16 @@ themesDivs.forEach(div => {
         img.addEventListener("load", loaded)
     }
 
+    function nnxt() {
+        div.classList.remove("nnxt")
+    }
+
+    if (img.complete) {
+        nnxt()
+    } else {
+        img.addEventListener('load', nnxt)
+    }
+
     function notFound(){
         div.style.backgroundImage='url("/Home-Page/img/404.png")';
     }
@@ -22,6 +32,19 @@ themesDivs.forEach(div => {
     } else {
         img.addEventListener("error", notFound)
     }
+
+})
+
+const wait = document.querySelector(".imgDsp1")
+wait.addEventListener('load', function(){
+    const show = document.getElementById("btn1")
+    show.classList.add("loaded")
+})
+
+const imgDsp = document.querySelector(".imgDsp")
+imgDsp.addEventListener('load', function(){
+    const show = document.getElementById("prev-btn1")
+    show.classList.add("loaded")
 })
 
 const relDivs = document.querySelectorAll(".rel-image")
@@ -76,27 +99,14 @@ function openNsfw(nsfw){
 function remNuxt(nuxt){
     if (nuxt == null) return
     nuxt.classList.remove('show')
-    nuxt.classList.add('nuxt1')
+    nuxt.classList.remove('show1')
+    nuxt.classList.add('nuxt')
 }
 
-const lightbox = document.createElement('div')
-lightbox.id = 'lightbox'
-document.body.appendChild(lightbox)
+const imageLink = document.querySelectorAll('.imgLnk')
 
-const images = document.querySelectorAll('.nzxt')
-images.forEach(image => {
-  image.addEventListener('click', e => {
-    lightbox.classList.add('active')
-    const img = document.createElement('img')
-    img.src = image.src
-    while (lightbox.firstChild) {
-      lightbox.removeChild(lightbox.firstChild)
-    }
-    lightbox.appendChild(img)
-  })
-})
-
-lightbox.addEventListener('click', e => {
-  if (e.target !== e.currentTarget) return
-  lightbox.classList.remove('active')
+imageLink.forEach(function(link) {
+    const href = link.getAttribute('href')
+    const img = link.querySelector('.imgDsp')
+    img.setAttribute('src', href)
 })

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/Home-Page/style/lightbox.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/Home-Page/style/post.css">
     
@@ -80,15 +81,11 @@
         <div class="title">Sasaki Saren - Princess Connect</div>
         <div class="themes-container">
             <div class="wrapper">
-                <div class="nxt">
-                    <div class="themes-image" style="background-image: url(/Home-Page/img/wait.png);">
-                            <img src="https://64.media.tumblr.com/d022fad5e51a946645096426a62ae5ae/b6a3fbc6acde6aea-0b/s1280x1920/806933f8071c43b9a03c146de9e9fd35c67f2953.pnj" alt="" loading="lazy">
-                    </div>
-                    <div class="themes-image" style="background-image: url(/Home-Page/img/wait.png);">
-                        <img src="https://64.media.tumblr.com/53af85ad47c3e99d6d00d8ee15a016a2/b6a3fbc6acde6aea-87/s1280x1920/0526d1c32236618f3a082ffb4eb797d33c68493e.pnj" alt="" loading="lazy">
-                    </div>
+                <div class="themes-image nnxt" style="background-image: url(/Home-Page/img/wait.png);">
+                    <a class="imgLnk1" href="https://64.media.tumblr.com/d022fad5e51a946645096426a62ae5ae/b6a3fbc6acde6aea-0b/s1280x1920/806933f8071c43b9a03c146de9e9fd35c67f2953.pnj" data-lightbox="img1">
+                        <img class="imgDsp1 nxxt" src="https://64.media.tumblr.com/d022fad5e51a946645096426a62ae5ae/b6a3fbc6acde6aea-0b/s1280x1920/806933f8071c43b9a03c146de9e9fd35c67f2953.pnj" alt="" loading="lazy">
+                    </a>
                 </div>
-                
                 <div class="headline">
                     <h3>How to install Windows 10 Theme</h3>
                 </div>
@@ -99,6 +96,16 @@
                         <li>Done!! Change themes from windows control panel</li>
                     </ol>
                 </div>
+                <div class="imgpreview">
+                    <button class="nuxt" id="prev-btn1" data-nsfw-target="#prev1" data-btn-rem="#prev-btn1">Show Image</button>
+                    <div class="" id="prev1">
+                        <div class="prevImg">
+                            <a class="imgLnk" data-lightbox="img1" href="https://64.media.tumblr.com/53af85ad47c3e99d6d00d8ee15a016a2/b6a3fbc6acde6aea-87/s1280x1920/0526d1c32236618f3a082ffb4eb797d33c68493e.pnj">
+                              <img class="imgDsp nzxt" src="https://64.media.tumblr.com/53af85ad47c3e99d6d00d8ee15a016a2/b6a3fbc6acde6aea-87/s1280x1920/0526d1c32236618f3a082ffb4eb797d33c68493e.pnj">
+                            </a>
+                        </div>
+                    </div>
+                </div> 
                 <div class="headline">
                     <h5>What's inside...</h2>
                 </div>
@@ -148,5 +155,6 @@
       </div>
 
     <script src="/Home-Page/js/post.js"></script>
+    <script src="/Home-Page/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
