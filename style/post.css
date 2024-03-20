@@ -92,7 +92,7 @@ body {
     transition: display 900ms ease-in-out;
 }
 
-.show1.loaded {
+.show1.active {
     display: flex;
 }
 
@@ -181,7 +181,7 @@ body {
     transition: display 900ms ease-in-out;
 }
 
-.show.loaded {
+.show.active {
     display: flex;
 }
 

@@ -38,13 +38,13 @@ themesDivs.forEach(div => {
 const imgDsp1 = document.querySelector(".imgDsp1")
 imgDsp1.addEventListener('load', function(){
     const show = document.getElementById("btn1")
-    show.classList.add("loaded")
+    show.classList.add("active")
 })
 
 const imgDsp = document.querySelector(".imgDsp")
 imgDsp.addEventListener('load', function(){
     const show = document.getElementById("prev-btn1")
-    show.classList.add("loaded")
+    show.classList.add("active")
 })
 
 const relDivs = document.querySelectorAll(".rel-image")
