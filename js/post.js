@@ -35,10 +35,19 @@ themesDivs.forEach(div => {
 
 })
 
-const imgDsp1 = document.querySelector(".imgDsp1")
-imgDsp1.addEventListener('load', function(){
-    const show = document.getElementById("btn1")
-    show.classList.add("active")
+const button1 = document.querySelectorAll(".show")
+button1.forEach(div => {
+    const img = document.querySelector(".imgDsp1")
+
+    function active(){
+        div.classList.add("active")
+    }
+
+    if (img.complete) {
+        active()
+    } else {
+        img.addEventListener('load', active)
+    }
 })
 
 const imgDsp = document.querySelector(".imgDsp")
