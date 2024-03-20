@@ -13,6 +13,11 @@ themesDivs.forEach(div => {
     img.addEventListener("load", loaded)
   }
 
+  img.onload = function(){
+    const btn = div.querySelector("button")
+    btn.classList.add("active")
+  }
+
   function notFound(){
     div.style.backgroundImage='url("/Home-Page/img/404.png")';
   }
@@ -28,6 +33,11 @@ const openNsfwBtn = document.querySelectorAll('[data-nsfw-target]')
 const remNuxtBtn = document.querySelectorAll('[data-btn-rem]')
 
 openNsfwBtn.forEach(button => {
+  function openNsfw(nsfw){
+    if (nsfw == null) return
+    nsfw.classList.remove('nsfw')
+  }
+
     button.addEventListener('click', () => {
         const nsfw = document.querySelector(button.dataset.nsfwTarget)
         openNsfw(nsfw)
@@ -35,18 +45,13 @@ openNsfwBtn.forEach(button => {
 })
 
 remNuxtBtn.forEach(button => {
+  function remNuxt(nuxt){
+    if (nuxt == null) return
+    nuxt.classList.remove('show')
+    nuxt.classList.add("nuxt")
+  }
     button.addEventListener('click', () =>{
         const nuxt = document.querySelector(button.dataset.btnRem)
         remNuxt(nuxt)
     })
 })
-
-function openNsfw(nsfw){
-    if (nsfw == null) return
-    nsfw.classList.remove('nsfw')
-}
-
-function remNuxt(nuxt){
-    if (nuxt == null) return
-    nuxt.classList.remove('show')
-}
