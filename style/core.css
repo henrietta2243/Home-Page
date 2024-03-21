@@ -195,4 +195,61 @@ img {
 .container-footer {
     background-color: #f0f8ff;
     padding: 1rem 2rem;
- }
+}
+
+.search {
+    margin-right: 4rem;
+}
+
+.search .section{
+  background-color:rgba(255,255,255,0.298);
+  box-sizing:border-box;
+  z-index:8;
+  border-radius: 6px;
+}
+
+.search.search-expand {
+  display: none;
+}
+
+.search form {
+  display: flex;
+}
+
+.search form .search-submit-container {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-box-ordinal-group: 1;
+  order: 0;
+  height: 40px;
+  width: 30px;
+  padding-left: 6px;
+}
+
+.search form .search-input {
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  -webkit-box-ordinal-group: 2;
+  order: 1;
+}
+
+.search form .search-input input {
+  box-sizing: border-box;
+  height: 40px;
+  width: 100%;
+}
+
+.search .search-input input{
+  background:0 0;
+  border:0;
+  color:#000000;
+  font:400 16px Merriweather, Georgia, serif;
+  outline:0;
+  padding:0 20px
+  }
+
+.search-submit-container input {
+  display: none;
+}
