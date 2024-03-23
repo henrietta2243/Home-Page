@@ -35,6 +35,10 @@ themesDivs.forEach(div => {
 
 })
 
+const relDivs = document.querySelectorAll(".rel-image")
+
+
+
 const button1 = document.querySelectorAll(".show")
 button1.forEach(div => {
     const img = document.querySelector(".imgDsp1")
@@ -56,31 +60,7 @@ imgDsp.addEventListener('load', function(){
     show.classList.add("active")
 })
 
-const relDivs = document.querySelectorAll(".rel-image")
 
-relDivs.forEach(div => {
-    const img = div.querySelector("img")
-
-    function loaded(){
-        div.classList.add("loaded")
-    }
-
-    if (img.complete) {
-        loaded()
-    } else {
-        img.addEventListener("load", loaded)
-    }
-
-    function notFound() {
-        div.style.backgroundImage='url("/Home-Page/img/404.png")';
-    }
-
-    if (img.error){
-        notFound()
-    } else {
-        img.addEventListener("error", notFound)
-    }
-})
 
 const openNsfwBtn = document.querySelectorAll('[data-nsfw-target]')
 const remNuxtBtn = document.querySelectorAll('[data-btn-rem]')
