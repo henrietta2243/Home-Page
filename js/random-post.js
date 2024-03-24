@@ -19,9 +19,11 @@ function getRandomPosts(numPosts) {
             const postContainer = document.getElementById('post-container');
             postContainer.innerHTML = '';
             randomPosts.forEach(post => {
+                    // Extract the first image from the post content
                     const image = post.content.match(/<img[^>]*src="([^"]+)"[^>]*>/);
-                    const imageUrl = image ? image[1] : ''; 
+                    const imageUrl = image ? image[1] : ''; // Extracted image URL
                     if (imageUrl) {
+                        // Display the image with a link to the post
                         postContainer.innerHTML += `
                             <div class="rndPostContainer">
                                 <a href="${post.url}">
@@ -41,6 +43,7 @@ function getRandomPosts(numPosts) {
 
 }
 
+// Call the function to fetch and display multiple random posts when the page loads
 window.onload = function() {
-    getRandomPosts(5);
+    getRandomPosts(3); // Change the number to display different numbers of random posts
 };

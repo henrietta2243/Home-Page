@@ -52,3 +52,43 @@
 .rndPostContainer .separator a {
     padding: 0;
 }
+
+.skeleton {
+    background-image: linear-gradient(
+      120deg,
+      #ececec 50%,
+      #fafafa 60%,
+      #fafafa 61%,
+      #ececec 70%
+    );
+    background-size: 200%;
+    background-position: 100% 0;
+    animation: waves 2s linear infinite;
+    border-radius: 10px;
+    width: 160px;
+    height: 16px;
+    margin-bottom: 5px;
+}
+
+.skeleton1 {
+    background-image: linear-gradient(
+      120deg,
+      #ececec 50%,
+      #fafafa 60%,
+      #fafafa 61%,
+      #ececec 70%
+    );
+    background-size: 200%;
+    background-position: 100% 0;
+    animation: waves 2s linear infinite;
+    border-radius: 10px;
+    width: 140px;
+    height: 16px;
+    margin-bottom: 5px;
+}
+  
+@keyframes waves {
+    100% {
+      background-position: -100% 0;
+    }
+}
